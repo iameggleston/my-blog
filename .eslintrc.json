@@ -21,7 +21,6 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "semi": 2, // ステートメントの末尾にセミコロンがないとerror
-    "trailingComma": 2, // カンマ区切り構文構造において、末尾にカンマがないとerror
     "import/order": [
       "error",
       {
