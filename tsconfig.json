@@ -2,6 +2,13 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"],
+        "/*": ["*"]
+      }
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
