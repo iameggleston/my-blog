@@ -14,19 +14,22 @@
   ],
   // 機能を追加する
   "plugins": [
-   "import" // import order関連の好きな設定を追加する
+    "import" // import order関連の好きな設定を追加する
   ],
   "rules": {
-    "no-undef": "error",// TypeScript利用時はno-undefルールはoffにする
+    "no-undef": "error", // TypeScript利用時はno-undefルールはoffにする
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "import/order": ["error", {
-    "newlines-between": "always", // グループ間に空白行が入る
-    "alphabetize": {
-      "order": "asc" // アルファベットの昇順に並び替えられる
-    },
-    "semi": true, // ステートメントの末尾にセミコロンを追加
-    "trailingComma": "all" // 複数行のカンマ区切り構文構造において、可能な限り末尾にカンマを追加
-  }]
+    "semi": 2, // ステートメントの末尾にセミコロンがないとerror
+    "trailingComma": 2, // カンマ区切り構文構造において、末尾にカンマがないとerror
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always", // グループ間に空白行がないとエラー
+        "alphabetize": {
+          "order": "asc" // アルファベットの昇順に並んでいないとエラー
+        }
+      }
+    ]
   }
 }
