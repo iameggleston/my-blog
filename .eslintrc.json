@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true, // たくさんのglobals設定が登録される
+    "es2021": true,
+    "jest": true
+    // "es6": true, // どっちの設定が正しいのか
+  },
+  // 設定ファイルを拡張するもの
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  // 機能を追加するもの
+  "plugins": [
+   "import" // import order関連の好きな設定を追加する
+  ],
+  "rules": {
+    "no-undef": "error",// TypeScript利用時はno-undefルールはoffにする
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/order": ["error", {
+    "newlines-between": "always", // グループ間に空白行が入る
+    "alphabetize": {
+      "order": "asc" // アルファベットの昇順に並び替えられる
+    }
+  }]
+  }
 }
