@@ -20,7 +20,7 @@
     "no-undef": "error", // TypeScript利用時はno-undefルールはoffにする
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "semi": 2, // ステートメントの末尾にセミコロンがないとerror
+    "semi": 2, // ステートメントの末尾にセミコロンがないとエラー
     "import/order": [
       "error",
       {
