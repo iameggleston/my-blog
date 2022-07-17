@@ -1,0 +1,14 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true // 保存時に実行されるコードアクションの種類
+  },
+  "eslint.format.enable": false, // Shift+Alt+FでESLint機能拡張のフォーマットを行わない
+  "editor.formatOnSave": true, // ファイル保存時の自動フォーマット有効
+  "editor.lineNumbers": "on", // 行番号は絶対番号としてレンダリングされます
+  "editor.rulers": [80], // 一定数の等幅文字の後に垂直ルーラーをレンダリングします
+  "editor.wordWrap": "on",  // 行の折り返し方法を制御します。行はビューポートの幅で折り返されます
+  "files.insertFinalNewline": true, // 有効にすると、ファイル保存時に最後の改行を挿入します
+  "files.trimTrailingWhitespace": true,// 保存時に、行の最後に空白文字があったら自動で削除します
+  "typescript.enablePromptUseWorkspaceTsdk": true, // ワークスペースに設定されたTypeScriptのバージョンをIntellisenseに使用するよう、ユーザーにプロンプトを表示する機能を有効にします
+  "jest.autoRun": { "watch": false } // VSCode の起動時に自動で jest のテストを走らせないように。
+}
