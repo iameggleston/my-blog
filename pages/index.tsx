@@ -1,63 +1,22 @@
-import axios from 'axios';
+import React from 'react';
 import type { NextPage } from "next";
-import Image from 'next/image';
 
-import { client } from "/libs/client";
+import Header from "/src/components/molecules/Header";
+import Main from "/src/components/molecules/Main";
+import {NewsBlock} from "/src/components/molecules/NewsBlock";
+import Btn from "/src/components/atoms/Btn";
+import { ImgList } from "/resource/ImgList";
 
-type DateType = {
-  category: object;
-  content: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  id: string;
-  title: string;
-};
-
-type Props = {
-  news: Array<DateType>;
-};
-
-const Home = ({news} : Props) => {
-  console.log(news);
+const Home: React.FC = () => {
   return (
     <>
-      <header><a href="/"><Image src="/img/logo.png" width="200" height="80" /></a></header>
-      <main>
-        <Image src="/img/main.jpg" width="1260" height="720" />
-      </main>
-      <div>
-        <h2>ニュース</h2>
-        <ul>
-          {news.map(item => {
-            return (
-              <li key={item.id}>
-                <a href={item.id}>{item.title}</a>
-              </li>
-            );
-          })}
-          <li>
-            <a href="#">{}</a>
-          </li>
-        </ul>
-      </div>
-      <a href="#">一覧へ</a>
+      <Header imgSrc={ImgList.headerLogo}/>
+      <Main imgSrc={ImgList.mainImg} />
+      <NewsBlock />
+      <Btn/>
     </>
   );
 };
 
 export default Home;
-
-export const getStaticProps = async() => {
-  const data = await client.get({
-    endpoint: "news",
-  });
-
-  return {
-    props: {
-      news: data.contents,
-    }
-  };
-};
 
