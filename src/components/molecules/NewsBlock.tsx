@@ -10,7 +10,6 @@ import { getNews } from '/redux/NewsSlice';
 
 export const NewsBlock: React.FC = () => {
   const {news, error} = useSelector(state => state.news);
-  console.log(news);
   // dispatch関数の作成
   const dispatch: AppDispatch = useDispatch();
   useEffect(() => {

@@ -16,7 +16,7 @@ type ItemType = {
 const Item: React.FC<ItemType> = ({item}) => {
   return(
     <li key={item.id}>
-      <a href={`/blog/${item.id}`}>{item.title}</a>
+      <a href={`/news/${item.id}`}>{item.title}</a>
     </li>
   );
 };
