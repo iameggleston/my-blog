@@ -10,10 +10,13 @@ type ItemType = {
     revisedAt: string;
     id: string;
     title: string;
-  }
+  } | null
 }
 
 const Item: React.FC<ItemType> = ({item}) => {
+  if(!item) {
+    return <p>No data!</p>;
+  }
   return(
     <li key={item.id}>
       <a href={`/news/${item.id}`}>{item.title}</a>

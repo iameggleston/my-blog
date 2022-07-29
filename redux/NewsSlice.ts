@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { client } from "/libs/client";
+import { client } from "libs/client";
 
 type DateType = {
   category: object;

@@ -2,11 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch} from "react-redux";
 
-import Heading from "/src/components/atoms/Heading";
-import Item from "/src/components/atoms/Item";
-import { useSelector, AppDispatch } from '/redux/Store';
+import { getNews } from 'redux/NewsSlice';
+import { useSelector, AppDispatch } from 'redux/Store';
+import Heading from "src/components/atoms/Heading";
+import Item from "src/components/atoms/Item";
+
 // 非同期関数をimport
-import { getNews } from '/redux/NewsSlice';
 
 export const NewsBlock: React.FC = () => {
   const {news, error} = useSelector(state => state.news);

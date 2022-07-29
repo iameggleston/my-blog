@@ -4,7 +4,7 @@ import {
   TypedUseSelectorHook,
 } from "react-redux";
 
-import newsReducer from "/redux/NewsSlice";
+import newsReducer from "redux/NewsSlice";
 
 export const store = configureStore({
   reducer: {
