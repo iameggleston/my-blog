@@ -11,7 +11,7 @@ import Item from "src/components/atoms/Item";
 
 export const NewsBlock: React.FC = () => {
   const {news, error} = useSelector(state => state.news);
-  // dispatch関数の作成
+  // dispatch関数の作成だよ
   const dispatch: AppDispatch = useDispatch();
   useEffect(() => {
     dispatch(getNews());
